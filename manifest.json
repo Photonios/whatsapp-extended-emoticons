@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "WhatsApp Emoticon Shortcuts",
+  "description": "Adds extended shortcuts for emoticons.",
+  "version": "1.0",
+  "icons": {
+      "128": "logo128.png"
+  },
+  "content_scripts": [{
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["loader.js"]
+  }],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "https://web.whatsapp.com/"
+  ],
+  "web_accessible_resources": ["code.js"]
+}
